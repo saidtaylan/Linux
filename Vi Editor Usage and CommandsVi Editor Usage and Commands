@@ -15,7 +15,7 @@ Editör ilk açıldığında "ESC" modu aktif olduğu için böyle bir geçiş y
 Editöre girip yazı moduna geçtiğinizde normal bir text dosyasında yazı yazar gibi kullanıyorsunuz.
 Ancak kopyalama, kesme geri alma gibi işlemler(kısayollar) için kısayol moduna geçmeniz yani "ESC" tuşuna basmanız gerekiyor.
 En çok işinize yarayacak bazı kısayolları vereceğim. Kısayollardan sonra "ENTER" tuşuna basmamak gerekiyor.
-  - "U/u" karakteri bir adım geri alır. CTRL+Z tuşunun işlevini görür.
+  - "U/u" karakteri bir adım geri alır. CTRL+Z tuşunun işlevini görür.  
   - Art arda iki kez "d" karakterine basmak; imlecin, üzerinde bulunduğu satırı siler. Bu karaktere basılı tutulursa yukarı doğru sırasıyla satırlar silinir.
   - "CTRL +f" bir sayfada bulunan satır sayısı kadar ileri, "CTRL +b" ise o kadar geri gider. Bir terminal ekranı kadar da düşünebilirsiniz. (!Bundan sonra "CTRL" karakteri için "^" karakteri kullanılacaktır)
   - "^d" sayfada bulunan satır satır sayısının yarısı kadar ileri, "^u" ise o kadar geri gider.  
@@ -25,5 +25,14 @@ En çok işinize yarayacak bazı kısayolları vereceğim. Kısayollardan sonra 
   - "f(x)" ifadesi; imlecin, üzerinde bulunduğu cümledeki x karakterinde imleci taşır. İmlecin şimdiki konumuna hangi "x" karakteri daha yakın ise imleç oraya gider.
       "fahmet" örneğinde olduğu gibi cümlede "ahmet" kelimesini arar.
   - ")" karakteri; imleci bir sonraki "." karakterinden sonraki ilk karaktere taşır. Yani cümle cümle ilerlemeyi sağlar.
-      "Pardus, bir işletim sistemi değildir. Linux işletim sisteminin bir dağıtımıdır."
+             "Pardus, bir işletim sistemi değildir. Linux işletim sisteminin bir dağıtımıdır."
       Buradaki örnekte imlecin "Pardus" kelimesinin ilk harfinde olduğunu düşünürsek, ")" karakterine basıldığında imleç "Linux" kelimesinin ilk harfine gidecektir.
+  - "(" karakteri ise, ")" karakterinin yaptığı görevi geriye doğru gerçekleştirir.
+  - "}" karakteri ise ")" karakterinden farklı olarak cümle cümle değil de paragraf paragraf ilerler. Bir tane boş satır gördüğü yere atlar.
+             "Ubuntu ve Pardus, Debian tabanlı dağıtımlardır.
+      
+      
+             Vi, Nano, LeafPed; Linux'taki bazı yazı editörleridir."
+      Bu örnekte imleci "Ubuntu" kelimensinin başında düşünürsek, "}" karakterine bastığımızda imleç "editörleridir" kelimesinin sonuna gelecektir.
+  - "{" karakteri, "}" karakterinin yaptığı işi, tam tersi yönde yapmaktadır.
+  
