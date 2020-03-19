@@ -1,0 +1,29 @@
+                Vi Editör Ne midir?
+  Vi eitör, oldukça yetenekli bir Linux, metin düzenleme aracıdır.
+Vi editör, Windows'taki klasik editörlere alışanlar için biraz farklı gelebilir fakat diğer editörlere göre olan yeteneklerini gördükçe çok seveceksiniz.
+Ben ilk kez bu editör ile tanıştığımda, kullanamayınca aylarca bir daha kullanmamıştım. Daha sonra, içindeki cevheri keşfedince kullanmaya başladım
+  Artık başlayalım.
+Vi editörün üç modu bulunmaktadır. Ama bunları kendim adlandırdım. Modlar şöyle:
+  -Yazı giriş modu
+  -Komut giriş modu
+  -Kısayol modu
+Modlar arasında bazı tuşlar ile geçiş yapılabiliyor.
+Yazı giriş için "a/A" veya "I/i", komut giriş modu için ":", kısayol modu için ise "ESC" tuşu kullanılmaktadır.
+Ancak bu tuşlar editör ilk açıldığındaki ana göre yazılmıştır. Yani siz. yazı giriş modundayken önce "ESC"ye ardından ":" ye basarsanız komut moduna erişebilirsiniz.
+Editör ilk açıldığında "ESC" modu aktif olduğu için böyle bir geçiş yapılmaktadır.
+Şimdi kafanız karışmış olabilir. Ancak kullandıkça ve ileride örneklerle daha iyi anlayacaksınız.
+Editöre girip yazı moduna geçtiğinizde normal bir text dosyasında yazı yazar gibi kullanıyorsunuz.
+Ancak kopyalama, kesme geri alma gibi işlemler(kısayollar) için kısayol moduna geçmeniz yani "ESC" tuşuna basmanız gerekiyor.
+En çok işinize yarayacak bazı kısayolları vereceğim. Kısayollardan sonra "ENTER" tuşuna basmamak gerekiyor.
+  - "U/u" karakteri bir adım geri alır. CTRL+Z tuşunun işlevini görür.
+  - Art arda iki kez "d" karakterine basmak; imlecin, üzerinde bulunduğu satırı siler. Bu karaktere basılı tutulursa yukarı doğru sırasıyla satırlar silinir.
+  - "CTRL +f" bir sayfada bulunan satır sayısı kadar ileri, "CTRL +b" ise o kadar geri gider. Bir terminal ekranı kadar da düşünebilirsiniz. (!Bundan sonra "CTRL" karakteri için "^" karakteri kullanılacaktır)
+  - "^d" sayfada bulunan satır satır sayısının yarısı kadar ileri, "^u" ise o kadar geri gider.  
+  - "^g" hangi satırda olduğumuzu, terminal ekranının aşağısında gösterir.
+  - "w" ifadesi, imleci bir sonraki kelimenin ilk karakterine, "b" ise bir önceki kelimenin ilk karakterine götürür.
+  - "e" karakteri, imleci bir sonraki kelimenin son karakterine götürür.
+  - "f(x)" ifadesi; imlecin, üzerinde bulunduğu cümledeki x karakterinde imleci taşır. İmlecin şimdiki konumuna hangi "x" karakteri daha yakın ise imleç oraya gider.
+      "fahmet" örneğinde olduğu gibi cümlede "ahmet" kelimesini arar.
+  - ")" karakteri; imleci bir sonraki "." karakterinden sonraki ilk karaktere taşır. Yani cümle cümle ilerlemeyi sağlar.
+      "Pardus, bir işletim sistemi değildir. Linux işletim sisteminin bir dağıtımıdır."
+      Buradaki örnekte imlecin "Pardus" kelimesinin ilk harfinde olduğunu düşünürsek, ")" karakterine basıldığında imleç "Linux" kelimesinin ilk harfine gidecektir.
