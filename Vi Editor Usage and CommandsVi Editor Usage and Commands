@@ -1,18 +1,19 @@
                 Vi Editör Ne midir?
-  Vi eitör, oldukça yetenekli bir Linux, metin düzenleme aracıdır.
+  Vi editör, oldukça yetenekli bir Linux metin düzenleme aracıdır.
 Vi editör, Windows'taki klasik editörlere alışanlar için biraz farklı gelebilir fakat diğer editörlere göre olan yeteneklerini gördükçe çok seveceksiniz.
 Ben ilk kez bu editör ile tanıştığımda, kullanamayınca aylarca bir daha kullanmamıştım. Daha sonra, içindeki cevheri keşfedince kullanmaya başladım
   Artık başlayalım.
-Termianal Ekranı üzerinden Editörü açmak için "vi metin.txt" yazmamız yeterlidir.
-Vi editörün üç modu bulunmaktadır. Ama bunları kendim adlandırdım. Modlar şöyle:
+Terminal Ekranı üzerinden bir dosyayı bu editör ile açmak için "vi metin.txt" yazmamız yeterlidir.
+Vi editörün üç modu bulunmaktadır. Modlar şöyle:
   -Yazı giriş modu
   -Komut giriş modu
-  -Kısayol modu
+  -Kısayol modu ( Bunu kendim adlnadırdım.)
 Modlar arasında bazı tuşlar ile geçiş yapılabiliyor.
 Yazı giriş için "a/A" veya "I/i", komut giriş modu için ":", kısayol modu için ise "ESC" tuşu kullanılmaktadır.
-Ancak bu tuşlar editör ilk açıldığındaki ana göre yazılmıştır. Yani siz. yazı giriş modundayken önce "ESC"ye ardından ":" ye basarsanız komut moduna erişebilirsiniz.
+Ancak bu tuşlar editör ilk açıldığındaki ana göre yazılmıştır. Yani siz, yazı giriş modundayken önce "ESC"ye ardından ":" ye basarsanız komut moduna erişebilirsiniz.
 Editör ilk açıldığında "ESC" modu aktif olduğu için böyle bir geçiş yapılmaktadır.
 Şimdi kafanız karışmış olabilir. Ancak kullandıkça ve ileride örneklerle daha iyi anlayacaksınız.
+
 Editöre girip yazı moduna geçtiğinizde normal bir text dosyasında yazı yazar gibi kullanıyorsunuz.
 Ancak kopyalama, kesme geri alma gibi işlemler(kısayollar) için kısayol moduna geçmeniz yani "ESC" tuşuna basmanız gerekiyor.
 En çok işinize yarayacak bazı kısayolları vereceğim. Kısayollardan sonra "ENTER" tuşuna basmamak gerekiyor.
