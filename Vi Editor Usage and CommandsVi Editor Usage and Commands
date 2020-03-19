@@ -3,6 +3,7 @@
 Vi editör, Windows'taki klasik editörlere alışanlar için biraz farklı gelebilir fakat diğer editörlere göre olan yeteneklerini gördükçe çok seveceksiniz.
 Ben ilk kez bu editör ile tanıştığımda, kullanamayınca aylarca bir daha kullanmamıştım. Daha sonra, içindeki cevheri keşfedince kullanmaya başladım
   Artık başlayalım.
+Termianal Ekranı üzerinden Editörü açmak için "vi metin.txt" yazmamız yeterlidir.
 Vi editörün üç modu bulunmaktadır. Ama bunları kendim adlandırdım. Modlar şöyle:
   -Yazı giriş modu
   -Komut giriş modu
@@ -15,6 +16,8 @@ Editör ilk açıldığında "ESC" modu aktif olduğu için böyle bir geçiş y
 Editöre girip yazı moduna geçtiğinizde normal bir text dosyasında yazı yazar gibi kullanıyorsunuz.
 Ancak kopyalama, kesme geri alma gibi işlemler(kısayollar) için kısayol moduna geçmeniz yani "ESC" tuşuna basmanız gerekiyor.
 En çok işinize yarayacak bazı kısayolları vereceğim. Kısayollardan sonra "ENTER" tuşuna basmamak gerekiyor.
+  - "ZZ" ifadesi metni kaydedip hemen editörden çıkış yapar. 
+  - "y" karakteri; üzerinde bulunduğu satırı kopyalar. Ve yapıştırmak istediğiniz satır üzerindeyken "y" karakterine basarsanız imlecin olduğu satıra yapıştırır.
   - "U/u" karakteri bir adım geri alır. CTRL+Z tuşunun işlevini görür.  
   - Art arda iki kez "d" karakterine basmak; imlecin, üzerinde bulunduğu satırı siler. Bu karaktere basılı tutulursa yukarı doğru sırasıyla satırlar silinir.
   - "CTRL +f" bir sayfada bulunan satır sayısı kadar ileri, "CTRL +b" ise o kadar geri gider. Bir terminal ekranı kadar da düşünebilirsiniz. (!Bundan sonra "CTRL" karakteri için "^" karakteri kullanılacaktır)
@@ -29,10 +32,42 @@ En çok işinize yarayacak bazı kısayolları vereceğim. Kısayollardan sonra 
       Buradaki örnekte imlecin "Pardus" kelimesinin ilk harfinde olduğunu düşünürsek, ")" karakterine basıldığında imleç "Linux" kelimesinin ilk harfine gidecektir.
   - "(" karakteri ise, ")" karakterinin yaptığı görevi geriye doğru gerçekleştirir.
   - "}" karakteri ise ")" karakterinden farklı olarak cümle cümle değil de paragraf paragraf ilerler. Bir tane boş satır gördüğü yere atlar.
-             "Ubuntu ve Pardus, Debian tabanlı dağıtımlardır.
-      
-      
-             Vi, Nano, LeafPed; Linux'taki bazı yazı editörleridir."
-      Bu örnekte imleci "Ubuntu" kelimensinin başında düşünürsek, "}" karakterine bastığımızda imleç "editörleridir" kelimesinin sonuna gelecektir.
   - "{" karakteri, "}" karakterinin yaptığı işi, tam tersi yönde yapmaktadır.
+  - "3x" ifadesi; imlecin, üzerinde bulunduğu karakterden itibaren sağa doğru 3 karakter siler."3" sayısı sadece örnektir, değişebilir.
+  - "dw" ifadesi, üstünde bulunduğu karakterden itibaren kelimenin kalanını siler.
+  - "d)" ifadesi, üzerinde bulunduğu karakterden itibaren cümlenin kalanını siler.
+  - "d$" ifadesi, bulunduğu karakterden itibaren satırın kalanını siler.
+  - "G" ifadesi ile imleç dosyanın sonuna gider
+
+Benim önemli gördüğüm kısayollar bunlar. Bunlardan daha bir bu kadar daha var. Ancak günlük hayatınızda kullanacağınızı düşünmediğim için bu kadar yazdım.
+Eğer derseniz ki; "Neden bir sayfa kaydırma, yarım sayfa kaydırma, kopyalama gibi kısayollara gerek duyayım. Zaten mouse ile daha kolay yapabiliyorum?"
+  Cevap olarak derim ki:
+  Eğer Linux'u sadece kendi bilgisayarınızda kullanacaksanız ihtiyacınız yok. Ancak uzak bir sunucuya bağlanırsanız ya da farenizi kullanamadığınız bir ortama denk gelirseniz bunları kullanmak zorunda kalacaksınız.
+
+Şimdi gelelim "komut modu"na. Burada da hepsini değil, sadece işinize yarayacağını düşündüğüm komutları derledim.
+Komut moduna girmek için, kısayol modundayken ":" karakterine basmamız gerektiğini hatırlatmakta fayda var.
+Bu karaktere basıp modumuza girdikten sonra artık şu komutları çalıştırabilirsiniz.
+  - "w" ifadesi dosyayı kaydeder. CTRL+S ile aynı işlevi görür.
+  - "wq" ifadesi kaydedip ardından editörden çıkış yapar.
+  - "q!" ifadesi metni kaydetmeden çıkar.
+  - "e!" ifadesi; metni, giriş yaptığımız ilk haline geri döndürür. Tabi ki bunun uygulanabilmesi için dosyanın "w" ile kaydedilmemiş olması gerekir.
+  - "sh" ifadesi editör içindeyken terminal ekranı açar. Yaptmak istediğiniz işleri terminalde gerçekleştirip, terminale "exit" yazarak editöre geri dönebilirsiniz.
+  - "r !komut" ifadesi ile çıktısı olan bir komutun çıktısını içinde bulunduğunuz metin belgesinin sonuna dahil edebilirsiniz.
+     Örneğin ":r !ls" ile bulunduğunuz dizindeki dosyaların listesini belgenize yazabilirsiniz.
+  - "r ornek.txt" ifadesi ile bulunduğumuz dosyayı "ornek.txt" adı ile başka bir dosya oalrak kaydeder. Windows işletim sistemindeki 'Farklı Kaydet' özelliği gibi.
+  - "/aranacak" ifadesi ile metin içinde arama yapabilirsiniz. "/" karakterinden sonra aramak istediğiniz ifadeyi yazıyorsunuz.
+  - "?aranacak" ifadesi ile metin içinde tersten arama yapabilirsiniz. Aşağıdan yukarıya doğru arar.
   
+Bu yazdıklarım Vi Editörü içinde uygulanan kısayol ve komutlar. Ancak terminal ekranı üzerinden editörü açarken uygulayabileceğiniz birkaç kolaylık daha var.
+Bunlar:
+  - "vi+ metin.txt" ifadesi ile metin belgesi açıldığı anda, imleç belgenin sonuna gider.
+  - "vi +5 metin.txt" ifadesi ile metin belgesi açıldığı anda imleç 5.satıra gider.
+  - "vi +/merhaba metin.txt" ifadesi ile metin belgesi açıldığı anda imleç, ilk "merhaba" yazan ifadeye gider.
+  - "vi metin.txt metin2.txt" ifadesi ile iki belge birden bu editör ile açılır. Bu metinler arasında, "komut modu"ndayken ":n" ifadesi ile hareket edilir.
+  - "vi -r metin.txt"ifadesi ile dosya hasara uğramışsa, hasardan hemen önceki hali getirilir metin.txt dosyasının.
+     Hasar denene şey, bilgisayarın aniden kapanması olabilir.
+     Burada bir şeyi daha söylemeliyiz ki: Bir metin belgesi açıldığında işletim sistemi, söz konusu dosya kaydedilene kadar metnin bir kopyasını(her yazılan karakterle beraber dinamik olarak) diske kaydeder. Buna "swap" dosyası adı verilir.
+     "vi -r metin.txt" komutunun mantığı budur aslında. Diskte kayıtlı olan dosyayı getirir.
+  
+
+  !!! Windows'tan ve Ve Linux da olsa diğer editörlerden alışkanlık olarak SAKIN "CTRL + S" e basmayın. Editör kilitlenir ve tekrardan başlatmanız gerekir. Yazdıklarınız kaybolabilir.
